@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none !important; 
+}
+
+:root {
+    --bg-dark: #050510;
+    --primary: #8a2be2;
+    --secondary: #00f0ff;
+    --text-main: #f0f0f0;
+    --text-muted: #a0a0b0;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+/* === CUSTOM MAGIC CURSOR === */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    box-shadow: 0 0 15px var(--secondary), 0 0 30px var(--secondary);
+    transition: width 0.3s, height 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.cursor.hovered {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
+}
+
+/* === ANIMATED BACKGROUND SHAPES === */
+.bg-shape {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    animation: floatShape 20s infinite alternate linear;
+}
+
+.shape1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary);
+    top: -100px;
+    left: -100px;
+    opacity: 0.5;
+}
+
+.shape2 {
+    width: 500px;
+    height: 500px;
+    background: var(--secondary);
+    bottom: -150px;
+    right: -100px;
+    opacity: 0.4;
+    animation-duration: 25s;
+    animation-direction: alternate-reverse;
+}
+
+.shape3 {
+    width: 300px;
+    height: 300px;
+    background: #ff007f;
+    top: 40%;
+    left: 40%;
+    opacity: 0.3;
+    animation-duration: 15s;
+}
+
+@keyframes floatShape {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(100px, -50px) scale(1.2); }
+    66% { transform: translate(-50px, 150px) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1.1); }
+}
+
+/* === GLASSMORPHISM UTILITY === */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* === NAVIGATION === */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(5, 5, 16, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+/* === TYPOGRAPHY === */
+.highlight {
+    color: var(--secondary);
+    text-shadow: 0 0 10px var(--secondary);
+}
+
+h1 { font-size: 3.5rem; margin-bottom: 10px; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px; line-height: 1.6; }
+
+/* === SECTIONS === */
+section, header {
+    padding: 120px 20px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 50px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 25px var(--primary);
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* === BUTTONS === */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 240, 255, 0.4);
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s;
+}
+
+.btn-small:hover {
+    background: var(--secondary);
+    color: #000;
+}
+
+/* === PROJECTS SECTION === */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-color: var(--secondary);
+    box-shadow: 0 15px 35px rgba(0, 240, 255, 0.2);
+}
+
+/* === FUN & CONTACT SECTION === */
+.text-center {
+    text-align: center;
+    padding: 60px 40px;
+    margin-top: 50px;
+}
+
+.fun-fact {
+    background: rgba(138, 43, 226, 0.1);
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 0 15px 15px 0;
+    text-align: left;
+}
+
+/* === NEW SOCIAL LINKS === */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    text-decoration: none;
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.social-btn i {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    transition: color 0.3s;
+}
+
+.social-btn:hover {
+    background: rgba(0, 240, 255, 0.1);
+    border-color: var(--secondary);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.social-btn:hover i {
+    color: #fff;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
