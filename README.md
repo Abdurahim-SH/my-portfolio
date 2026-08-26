@@ -1,14 +1,12 @@
 # 🚀 My Personal Portfolio
 
-Welcome to my personal portfolio website repository! Built as part of the Hack Club Stardance program using modern web standards.
+Hi, welcome to my portfolio, here you can find interesting info about me.
 
 ---
 
 ## 🛠️ Built With
 
-* **HTML5** — Semantic structure
-* **CSS3** — Custom styling and responsive design
-* **GitHub Pages** — Hosting & deployment
+I use HTML, CSS and some JavaScript to add some animation.
 
 ---
 
@@ -16,11 +14,10 @@ Welcome to my personal portfolio website repository! Built as part of the Hack C
 
 * Personal introduction and bio
 * Social links (GitHub, contact details)
-* Dark-themed responsive design
 
 ---
 
-## 🔗 Quick Links
+## 🔗 If you wanna see, here's links to porfolio. 
 
 * 🌐 **Live Demo:** [Visit Site](https://Abdurahim-SH.github.io/my-portfolio/)
 * 📦 **Repository:** [View Code](https://github.com/Abdurahim-SH/my-portfolio)
