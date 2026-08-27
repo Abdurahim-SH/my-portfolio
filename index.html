@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abduraxim's Universe</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for futuristic look -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Custom Cursor -->
     <div class="cursor"></div>
     <div class="bg-shape shape1"></div>
     <div class="bg-shape shape2"></div>
     <div class="bg-shape shape3"></div>
 
     <nav>
-        <div class="logo">🚀 STARDANCE</div>
+        <div class="logo">🚀 STARDANCE
+        </div>
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">My Work</a></li>
@@ -28,20 +26,18 @@
         </ul>
     </nav>
 
-    <!-- Hero / About Section -->
     <header id="about" class="glass-panel">
         <div class="hero-content">
-            <!-- Cool robot avatar generated for Abduraxim -->
             <img src="https://api.dicebear.com/9.x/bottts/svg?seed=Abduraxim" alt="My Avatar"
                 class="profile-img floating">
-            <h1>Hello, I'm <span class="highlight">Abduraxim</span></h1>
-            <p>Welcome to my digital galaxy! I am <strong>Abduraxim Sharifjonov</strong>, a 1passionate developer from
-                Uzbekistan exploring the vast universe of code, building cool projects, and constantly learning new web
-                technologies.</p>
+            <h1>Hi, I'm <span class="highlight">Abduraxim</span></h1>
+            <p>Welcome to my portfolio! I am <strong>Abduraxim Sharifjonov</strong>, a developer from
+                Uzbekistan that want to improve coding skills, building real projects to get experience, and frequently
+                participate to hackatons to build a networks.</p>
             <a href="https://github.com/Abdurahim-SH" target="_blank" class="btn">View My GitHub</a>
         </div>
     </header>
-    <!-- Projects Section -->
+
     <section id="projects">
         <h2>My <span class="highlight">Real Projects</span> 💻</h2>
         <div class="card-container">
@@ -49,7 +45,8 @@
                 <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=500&q=60"
                     alt="PathFinderAI">
                 <h3>PathFinderAI</h3>
-                <p>An intelligent pathfinding project built with TypeScript. Exploring complex algorithms and logic.</p>
+                <p>As name tell us its AI that help to students to find their way like programs, activities and
+                    collages.</p>
                 <a href="https://github.com/Abdurahim-SH/PathFinderAI" target="_blank" class="btn-small">Explore
                     Code</a>
             </div>
@@ -58,8 +55,7 @@
                 <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=60"
                     alt="AirCanvas">
                 <h3>Aircanvas</h3>
-                <p>A cool Python computer vision project! Written using modern backend tech to interact with visual
-                    data.</p>
+                <p>AI that detects your movment of finger, draw and you can also switch color to draw.</p>
                 <a href="https://github.com/Abdurahim-SH/aircanvas" target="_blank" class="btn-small">Explore Code</a>
             </div>
 
@@ -67,20 +63,19 @@
                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=500&q=60"
                     alt="DentCare">
                 <h3>Dentcare</h3>
-                <p>A web application built with JavaScript. Focused on providing a clean, functional digital interface.
+                <p>
+                    My first project as fullstack developer, helping organizations like hospital to become popular.
                 </p>
                 <a href="https://github.com/Abdurahim-SH/dentcare" target="_blank" class="btn-small">Explore Code</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Silly Stuff Section -->
     <section id="contact" class="glass-panel text-center">
         <h2>Let's <span class="highlight">Connect!</span> 🛸</h2>
         <div class="fun-fact">
-            <p><strong>Random Fact:</strong> Every great project starts with a single line of code and a cup of tea!</p>
-            <p>Want to build a spaceship together or just talk about coding? You can find me across the galaxy using
-                these communication channels:</p>
+            <p><strong>Random Fact:</strong> I love a cup of coffee and chocolate while coding.</p>
+            <p>Want to reach me? Here's my channels:</p>
         </div>
         <div class="social-links">
             <a href="https://github.com/Abdurahim-SH" target="_blank" class="social-btn">
@@ -99,20 +94,17 @@
     </section>
 
     <footer>
-        <p>© 2026 Abduraxim Sharifjonov | Crafted with 💜 for Hack Club Stardance.</p>
+        <p>© 2026 Abduraxim Sharifjonov</p>
     </footer>
 
-    <!-- Script for the Custom Magic Cursor -->
     <script>
         const cursor = document.querySelector('.cursor');
 
-        // Move cursor with mouse
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
 
-        // Add hover effect for ALL links and buttons, including new social buttons
         const interactables = document.querySelectorAll('a, .card, .btn, .btn-small, .social-btn');
 
         interactables.forEach(el => {
@@ -124,6 +116,4 @@
             });
         });
     </script>
-</body>
-
-</html>
+</body </html>
